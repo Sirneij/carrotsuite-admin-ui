@@ -1,0 +1,548 @@
+/* common styles */
+:root {
+  box-sizing: border-box;
+  /* font-size: calc(1vw + 0.65rem); */
+  /* font-size: 65.8%; */
+  font-size: 0.625rem;
+  font-family: "Josefin Sans", sans-serif;
+  --sidebar-bgColor: #023059;
+  --sidebar-bgColor-hover: #683fbf;
+  --sidebar-txtColor: #dde9f8;
+  --sidebar-headingColor: #7889a4;
+  --page-content-bgColor: #f0f1f6;
+  --page-content-txtColor: #171616;
+  --page-content-blockColor: #fff;
+  --icon-color: #f29441;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #b1160e;
+  --pink: #f279c8;
+  --purple: #8a33fe;
+  --cyan: #5bb7ea;
+  --ash: #f6b166;
+  --deep-blue: #023059;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+a,
+button {
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+}
+
+input {
+  -webkit-appearance: none;
+}
+body {
+  background-color: #f0f8fd;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* end of common styles */
+.carrotsuite-nav {
+  position: relative;
+  width: 100%;
+  height: 6.5rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+  transition: 0.5s all ease-in-out;
+}
+.carrotsuite-nav .logo {
+  position: absolute;
+  left: 0.5rem;
+  width: 20rem;
+  height: 6.5rem;
+}
+.carrotsuite-nav .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.carrotsuite-nav .icons {
+  display: flex;
+  align-items: center;
+}
+.badge {
+  position: absolute;
+  top: 10%;
+  left: 7%;
+  width: 2rem;
+  height: 2rem;
+  font-size: small;
+  background-color: #eb4961;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  color: #fff;
+}
+.badge span {
+  text-align: center;
+}
+.carrotsuite-nav .nav-item {
+  transition: 0.5s all ease-in-out;
+}
+.carrotsuite-nav .nav-item:hover {
+  color: var(--sidebar-bgColor);
+}
+
+/* .carrotsuite-nav .nav-item:hover {
+  animation: toTop;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+@keyframes toTop {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+} */
+.carrotsuite-nav .icons.left {
+  position: relative;
+  left: -15%;
+}
+.carrotsuite-nav .icons.right {
+  position: relative;
+  right: -30%;
+}
+.carrotsuite-nav .icons a {
+  text-decoration: none;
+  margin-right: 3rem;
+  font-size: 2.5rem;
+  color: #97989a;
+}
+
+.carrotsuite-nav .icons .active {
+  color: #1aa1f5;
+}
+
+.carrotsuite-nav .user {
+  position: absolute;
+  right: 0.5rem;
+  top: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.carrotsuite-nav .user-img-wrapper {
+  width: 4rem;
+  height: 4rem;
+}
+.carrotsuite-nav .user-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.carrotsuite-nav .user-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #444444;
+}
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: 28rem 2fr;
+  overflow: hidden;
+  height: calc(100vh - 6.5rem);
+  transition: 0.5s all ease-in-out;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  height: 100vh;
+  overflow: auto;
+  color: var(--sidebar-txtColor);
+  background: var(--sidebar-bgColor);
+}
+.sidebar > h3 {
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.sidebar .menu li:last-child {
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar .menu li > * {
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
+.sidebar .menu .menu-heading h3 {
+  letter-spacing: 0.15em;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  color: var(--white);
+}
+.sidebar .menu li:not(:first-child) {
+  border: 0.125rem solid #002549;
+}
+.sidebar .menu li a {
+  font-size: 1.5rem;
+}
+
+.sidebar .menu i {
+  color: var(--icon-color);
+  margin-right: 0.8rem;
+}
+
+.sidebar .menu a,
+.sidebar .menu button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.sidebar .menu a:hover,
+.sidebar .menu a:focus,
+.sidebar .menu button:hover,
+.sidebar .menu button:focus {
+  background: var(--sidebar-bgColor-hover);
+  color: var(--white);
+  outline: none;
+}
+
+.sidebar .menu a.active {
+  background: var(--sidebar-bgColor-hover);
+  color: var(--white);
+  outline: none;
+}
+
+.page-content {
+  grid-column: 2 / -1;
+  margin: 3rem;
+  overflow: hidden;
+}
+.page-content .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-content .header .info {
+  display: flex;
+  flex-direction: column;
+}
+.page-content .header .info p {
+  font-size: 1.5rem;
+  padding: 0.6rem;
+}
+
+.page-content .header .info p:first-child {
+  color: #807f84;
+}
+.page-content .header .info p span {
+  color: #f279c8;
+  font-size: small;
+}
+.page-content .header .dropdown {
+  margin-left: auto;
+}
+button {
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.dropbtn {
+  background: rgba(255, 0, 0, 0.6);
+  color: var(--white);
+  border-radius: 5rem;
+  text-transform: uppercase;
+}
+.dropbtn i {
+  margin-left: 1.2rem;
+  transition: 0.5s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 16rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+}
+.dropdown-content a {
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.dropdown-content a svg {
+  margin-right: 0.5rem;
+}
+
+.dropdown .dropdown-content {
+  transition: 0.5s all ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown .dropbtn {
+  transition: 0.5s all ease-in-out;
+}
+.dropdown:hover .dropbtn {
+  background-color: var(--red);
+}
+
+.dropdown:hover .dropbtn i {
+  transform: rotate(-180deg);
+}
+.bg-pink {
+  background: var(--pink);
+  color: var(--white);
+}
+.bg-purple {
+  background: var(--purple);
+  color: var(--white);
+}
+.bg-cyan {
+  background: var(--cyan);
+  color: var(--white);
+}
+.bg-ash {
+  background: var(--ash);
+  color: var(--white);
+}
+.bg-deep-blue {
+  background: var(--deep-blue);
+  color: var(--white);
+}
+.bg-pale {
+  background: #eb4961;
+  color: var(--white);
+}
+
+.page-content .board {
+  background: var(--white);
+  border-radius: 0.5rem;
+  max-height: 100%;
+  overflow: auto;
+  padding: 2rem;
+}
+.board > p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.board .boxes {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+.box {
+  padding: 1.5rem;
+  min-width: 22rem;
+  border-radius: 1rem;
+  margin-right: 2.5rem;
+}
+.box p {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.box .icon-value {
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: flex-end; */
+}
+.box .icon-value .icon {
+  padding: 1rem;
+  font-size: 6rem;
+  margin-bottom: -2rem;
+}
+.box .icon-value .value {
+  font-size: 3rem;
+  margin-left: auto;
+}
+.create-client {
+  display: flex;
+  margin-top: 1rem;
+}
+.create-client button {
+  margin-left: auto;
+  background: #89c34a;
+  border-radius: 0.5rem;
+  color: var(--white);
+}
+.create-client button i {
+  margin-right: 0.5rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.5rem;
+  resize: vertical;
+}
+
+label {
+  padding: 1.2rem 1.2rem 1.2rem 0;
+  display: block;
+  font-size: 1.4rem;
+}
+
+.form {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-element {
+  min-width: 20.5rem;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* resposive */
+
+@media (max-width: 1280px) {
+  .carrotsuite-nav .icons.left {
+    left: -10%;
+  }
+  .carrotsuite-nav .icons.right {
+    right: -15%;
+  }
+}
+@media (max-width: 894px) {
+  .carrotsuite-nav .icons.left {
+    left: -5%;
+  }
+  .carrotsuite-nav .icons.right {
+    right: -10%;
+  }
+  .form-element {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 764px) {
+  .carrotsuite-nav .icons.left {
+    left: 0;
+  }
+  .carrotsuite-nav .icons.right {
+    right: 0;
+  }
+}
+
+@media (max-width: 654px) {
+  .carrotsuite-nav .icons a {
+    margin-right: 1.5rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 626px) {
+  .carrotsuite-nav .icons a {
+    margin-right: 1.5rem;
+    font-size: 2rem;
+  }
+  .carrotsuite-nav .user .user-link {
+    display: none;
+  }
+  .main {
+    grid-template-columns: 4rem 2fr;
+  }
+  .sidebar .menu li > * {
+    padding: 1rem;
+  }
+
+  .sidebar .menu i {
+    margin-right: 0;
+  }
+  .sidebar .menu a span,
+  .sidebar > h3,
+  .sidebar .menu-heading {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .badge {
+    top: 0.8rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .carrotsuite-nav .icons a {
+    right: -100%;
+  }
+}
+
+@media (max-width: 544px) {
+  .carrotsuite-nav .icons.right {
+    right: -25%;
+  }
+  .carrotsuite-nav .icons.left {
+    position: absolute;
+    top: 2rem;
+    left: 45%;
+  }
+}
+
+@media (max-width: 430px) {
+  .carrotsuite-nav .logo {
+    left: -2rem;
+  }
+}
+
+@media (max-width: 428px) {
+  .carrotsuite-nav .icons.right {
+    right: -33%;
+  }
+}

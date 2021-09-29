@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrotsuite</title>
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Carrotsuite navigation -->
+        <nav class="carrotsuite-nav">
+          <div class="logo">
+            <a href="index.html" class="active nav-item">
+              <img src="images/Carrotsuite.jpg" alt="Carrotsuite" />
+            </a>
+          </div>
+
+          <div class="icons left">
+            <a href="#" class="nav-item"><i class="fas fa-bars"></i></a>
+            <a href="#" class="nav-item"> <i class="fas fa-compress"></i></a>
+            <a href="#" class="nav-item"> <i class="fas fa-search"></i></a>
+          </div>
+          <div class="icons right">
+            <a href="#" class="nav-item">
+              <div class="badge"><span>5</span></div>
+              <i class="far fa-bell"></i>
+            </a>
+            <a href="#" class="nav-item"><i class="far fa-envelope"></i></a>
+          </div>
+          <div class="user" id="user">
+            <a href="#" class="user-link">no name</a>
+            <div class="user-img-wrapper">
+              <img src="images/useravatar.png" alt="User 1" />
+            </div>
+          </div>
+        </nav>
+        <!-- end of feeds navigation -->
+      </header>
+      <main class="main">
+        <section class="sidebar">
+          <h3>CRM</h3>
+          <ul class="menu">
+            <li>
+              <a href="#" title="Home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Dashboard">
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="active" title="Clients">
+                <i class="fas fa-sitemap"></i>
+                <span>Clients</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Upcoming birthdays">
+                <i class="fas fa-birthday-cake"></i>
+                <span>Upcoming birthdays</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Deals">
+                <i class="fas fa-thumbs-up"></i>
+                <span>Deals</span>
+              </a>
+            </li>
+            <li class="menu-heading">
+              <h3>Log activity</h3>
+            </li>
+            <li>
+              <a href="#" title="Activity report">
+                <i class="fas fa-chart-bar"></i>
+                <span>Activity report</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Sales target">
+                <i class="fas fa-bullseye"></i>
+                <span>Sales target</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Sales performance">
+                <i class="fas fa-chart-line"></i>
+                <span>Sales performance</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="page-content">
+          <article class="header">
+            <div class="info">
+              <p>Loading...</p>
+              <p><span>Dashboard</span> _Client</p>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Actions <i class="fas fa-caret-up"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                    />
+                  </svg>
+                  Send SMS
+                </a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+                    <polyline points="3 7 12 13 21 7" />
+                  </svg>
+                  Send Email
+                </a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M7 18a4.6 4.4 0 0 1 0 -9a5 4.5 0 0 1 11 2h1a3.5 3.5 0 0 1 0 7h-1"
+                    />
+                    <polyline points="9 15 12 12 15 15" />
+                    <line x1="12" y1="12" x2="12" y2="21" />
+                  </svg>
+                  Export
+                </a>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"
+                    />
+                    <line x1="12" y1="13" x2="12" y2="22" />
+                    <polyline points="9 19 12 22 15 19" />
+                  </svg>
+                  Import
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="board">
+            <p>Clients</p>
+            <section class="boxes">
+              <div class="box bg-pink">
+                <p>All customers</p>
+                <div class="icon-value">
+                  <div class="icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+              <div class="box bg-purple">
+                <p>No of transactions</p>
+                <div class="icon-value">
+                  <div class="icon">
+                    <i class="fas fa-exchange-alt"></i>
+                  </div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+              <div class="box bg-cyan">
+                <p>Current/Ongoing</p>
+                <div class="icon-value">
+                  <div class="icon"><i class="fab fa-forumbee"></i></div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+              <div class="box bg-ash">
+                <p>post sales</p>
+                <div class="icon-value">
+                  <div class="icon">
+                    <i class="fas fa-chart-pie"></i>
+                  </div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+              <div class="box bg-deep-blue">
+                <p>Incoming sales</p>
+                <div class="icon-value">
+                  <div class="icon">
+                    <i class="fas fa-cart-arrow-down"></i>
+                  </div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+              <div class="box bg-pale">
+                <p>Passive transactions</p>
+                <div class="icon-value">
+                  <div class="icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <p class="value">0</p>
+                </div>
+              </div>
+            </section>
+            <section class="create-client">
+              <button><i class="fas fa-plus"></i>Create client</button>
+            </section>
+            <form action="" class="form">
+              <div class="form-element">
+                <label for="start_date">Start date</label>
+                <input type="date" name="start_date" id="start_date" />
+              </div>
+              <div class="form-element">
+                <label for="end_date">End date</label>
+                <input type="date" name="end_date" id="end_date" />
+              </div>
+              <div class="form-element">
+                <label for="status">Select status</label>
+                <select name="status" id="status">
+                  <option value="" disabled>All clients</option>
+                  <option value="">Status 1</option>
+                  <option value="">Status 2</option>
+                </select>
+              </div>
+              <div class="form-element">
+                <label for="items">Item</label>
+                <select name="items" id="items">
+                  <option value="" disabled>Select an item</option>
+                  <option value="">Item 1</option>
+                  <option value="">Item 2</option>
+                </select>
+              </div>
+
+              <div class="form-element">
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                  <option value="" disabled>Select country</option>
+                  <option value="">Status 1</option>
+                  <option value="">Status 2</option>
+                </select>
+              </div>
+              <div class="form-element">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                  <option value="" disabled>Select state</option>
+                  <option value="">Item 1</option>
+                  <option value="">Item 2</option>
+                </select>
+              </div>
+              <div class="form-element">
+                <label for="marketer">Marketer</label>
+                <select name="marketer" id="marketer">
+                  <option value="" disabled>Select marketer</option>
+                  <option value="">Item 1</option>
+                  <option value="">Item 2</option>
+                </select>
+              </div>
+              <div class="form-element">
+                <label for="branch">Branch</label>
+                <select name="branch" id="branch">
+                  <option value="" disabled>Select branch</option>
+                  <option value="">Item 1</option>
+                  <option value="">Item 2</option>
+                </select>
+              </div>
+            </form>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      const menuLinks = document.querySelectorAll(".sidebar .menu a");
+
+      for (const link of menuLinks) {
+        link.addEventListener("mouseenter", function () {
+          if (window.matchMedia("(max-width: 626px)").matches) {
+            const tooltip = this.querySelector("span").textContent;
+            this.setAttribute("title", tooltip);
+          } else {
+            this.removeAttribute("title");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
